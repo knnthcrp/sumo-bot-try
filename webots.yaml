@@ -1,0 +1,12 @@
+version: 1.0
+
+project:
+  name: Sumobot Simulation
+
+worlds:
+  - worlds/sumobot_world.wbt
+
+controllers:
+  sumobot_controller:
+    language: python
+    path: controllers/sumobot_controller.py
