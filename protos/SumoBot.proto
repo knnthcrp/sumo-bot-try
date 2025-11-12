@@ -1,1 +1,34 @@
+#VRML_SIM R2022b utf8
+
+PROTO SumoBot [
+  field SFString name "SumoBot"
+]
+{
+  Robot {
+    name IS name
+    controller "sumobot_controller"
+    controllerArgs []
+
+    # Wheels
+    device [
+      RotationalMotor {
+        name "left wheel motor"
+        maxVelocity 6.28
+      }
+      RotationalMotor {
+        name "right wheel motor"
+        maxVelocity 6.28
+      }
+    ]
+
+    # Ultrasonic sensor
+    device [
+      DistanceSensor {
+        name "front sensor"
+        type "ultrasonic"
+        samplingPeriod 32
+      }
+    ]
+  }
+}
 
